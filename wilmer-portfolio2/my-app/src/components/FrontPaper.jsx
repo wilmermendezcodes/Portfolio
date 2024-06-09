@@ -1,25 +1,36 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
+import AboutMe from "./papercomponents/AboutMe";
+import Experience from "./papercomponents/Experience";
 
-
-export default function FrontPaper() {
+const FrontPaper = ({ aboutmestatus, experiencestatus }) => {
   return (
     <Box
       sx={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        '& > :not(style)': {
+        display: "flex",
+        flexWrap: "wrap",
+        "& > :not(style)": {
           m: 1,
-          maxWidth: 100,
-          height: 500,
+          maxWidth: 2000,
+          height: 600,
         },
       }}
-      style={{          backgroundColor: '#E6D5A9'}}
+      style={{
+        backgroundColor: "#F4F7E9",
+      }}
     >
-
-      <Paper />
-
+      <Paper
+        style={{
+          backgroundColor: "#EFF3DE",
+          width: 2000,
+        }}
+      >
+        {aboutmestatus == 1 && <AboutMe />}
+        {experiencestatus == 1 && <Experience />}
+      </Paper>
     </Box>
   );
-}
+};
+
+export default FrontPaper;

@@ -1,12 +1,12 @@
 import React from 'react';
 import AppBar from './components/ResponsiveAppBar'
-import FrontPaper from './components/FrontPaper'
+import Footer from './components/Footer'
 
-function App() {
+const App = () => {
   return (
     <div>
     <AppBar/>
-    <FrontPaper/>
+    <Footer/>
     </div>
   );
 }
