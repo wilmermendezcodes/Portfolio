@@ -7,22 +7,20 @@ import Skills from "./papercomponents/Skills";
 import { Typography } from "@mui/material";
 
 // Array of characters for the typing effect
-const characters = "Wrrrite code. Blow minds.";
+const characters = "Write code. Blow minds.";
 
 const FrontPaper = ({ aboutmestatus, experiencestatus, skillsstatus }) => {
   // State to store the currently displayed text
   const [displayText, setDisplayText] = React.useState("");
 
   // Function to simulate typing effect
-  const simulateTyping = (text) => {
-    let index = 0;
-    const typingInterval = setInterval(() => {
-      setDisplayText((prevText) => prevText + text.charAt(index));
-      index++;
-      if (index === text.length) {
-        clearInterval(typingInterval);
-      }
-    }, 100); // Typing speed (milliseconds per character)
+  const simulateTyping = (text, index = 0) => {
+    if (index < text.length) {
+      setTimeout(() => {
+        setDisplayText((prevText) => prevText + text.charAt(index));
+        simulateTyping(text, index + 1);
+      }, 100); // Typing speed: 100 milliseconds per character
+    }
   };
 
   // useEffect to simulate typing effect when the component mounts or when the statuses change
