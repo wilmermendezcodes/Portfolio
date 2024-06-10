@@ -7,7 +7,7 @@ import Skills from "./papercomponents/Skills";
 import { Typography } from "@mui/material";
 
 // Array of characters for the typing effect
-const characters = "Write code. Blow minds.";
+const characters = "Wrrrite code. Blow minds.";
 
 const FrontPaper = ({ aboutmestatus, experiencestatus, skillsstatus }) => {
   // State to store the currently displayed text
