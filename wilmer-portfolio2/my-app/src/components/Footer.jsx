@@ -29,7 +29,7 @@ const ContactInfo = () => {
       </Grid>
       <Grid item>
         <Typography variant="body2" color="white">
-          Website: <Link color="inherit" href="https://example.com/">example.com</Link>
+          Website: <Link color="inherit" href="https://wilmer-portfolio.vercel.app/">https://wilmer-portfolio.vercel.app/</Link>
         </Typography>
       </Grid>
     </Grid>
