@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -10,18 +10,27 @@ import Button from "@mui/material/Button";
 import AdbIcon from "@mui/icons-material/Adb";
 import image from "../wilmermendez.jpg";
 import FrontPaper from "./FrontPaper";
+import "./App.css"; // Import the CSS for the cursor
 
 const pages = ["About Me", "Experience", "Skills"];
 
 const ResponsiveAppBar = () => {
-  const [activePage, setActivePage] = React.useState(null);
+  const [activePage, setActivePage] = useState(null);
+  const [clickPosition, setClickPosition] = useState({ x: 0, y: 0 });
+  const [showScatter, setShowScatter] = useState(false);
 
   const handlePageChange = (page) => {
     setActivePage(page);
   };
 
+  const handleClick = (e) => {
+    setClickPosition({ x: e.clientX, y: e.clientY });
+    setShowScatter(true);
+    setTimeout(() => setShowScatter(false), 1000); // Hide scatter effect after 1 second
+  };
+
   return (
-    <div>
+    <div className="app-container" onClick={handleClick}>
       <AppBar position="static" style={{ backgroundColor: "#738A0A" }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
@@ -72,7 +81,11 @@ const ResponsiveAppBar = () => {
           </Toolbar>
         </Container>
       </AppBar>
-      <FrontPaper aboutmestatus={activePage === "About Me" ? 1 : 0} experiencestatus={activePage === "Experience" ? 1 : 0} skillsstatus={activePage === "Skills" ? 1 : 0} />
+      <FrontPaper
+        aboutmestatus={activePage === "About Me" ? 1 : 0}
+        experiencestatus={activePage === "Experience" ? 1 : 0}
+        skillsstatus={activePage === "Skills" ? 1 : 0}
+      />
     </div>
   );
 };

@@ -29,7 +29,7 @@ const FrontPaper = ({ aboutmestatus, experiencestatus, skillsstatus }) => {
     if (!aboutmestatus && !experiencestatus && !skillsstatus) {
       simulateTyping(characters);
     }
-  }, [aboutmestatus, experiencestatus, skillsstatus]);
+  }, [aboutmestatus, experiencestatus, skillsstatus]); 
 
   return (
     <Box
@@ -69,7 +69,6 @@ const FrontPaper = ({ aboutmestatus, experiencestatus, skillsstatus }) => {
             <span className="typing-sign">|</span> {/* Typing sign */}
           </Typography>
         )}
-
         {/* CSS animations for 3D effects */}
         <style>
           {`
