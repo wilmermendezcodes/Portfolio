@@ -42,7 +42,7 @@ const AboutMe = () => {
                 textAlign: "center",
               }}
             >
-              Developer
+              Application Support Developer
             </Typography>
           </Grid>
 
@@ -59,7 +59,7 @@ const AboutMe = () => {
                 About Me
               </Typography>
               <Typography variant="body1" sx={{ fontFamily: "monospace" }}>
-                Hi, I am a passionate programmer with four years of experience
+                Hi, I am a passionate programmer with five years of experience
                 in the industry. I graduated in Mechatronics but chose
                 programming as my career because I love coding. My strengths
                 include being a fast learner and highly adaptable to new

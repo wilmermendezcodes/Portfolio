@@ -46,7 +46,7 @@ const Experience = () => {
                 paddingBottom: "4px",
               }}
             >
-              Junior Developer
+              Application Support Developer
             </Typography>
             <Typography variant="body1" sx={{ fontFamily: "monospace", marginBottom: 2 }}>
               ShoreCloud Corp., Part of Thermofisher (2020-present)
