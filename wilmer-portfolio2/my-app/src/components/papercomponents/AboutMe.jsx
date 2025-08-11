@@ -59,13 +59,11 @@ const AboutMe = () => {
                 About Me
               </Typography>
               <Typography variant="body1" sx={{ fontFamily: "monospace" }}>
-                Hi, I am a passionate programmer with five years of experience
-                in the industry. I graduated in Mechatronics but chose
-                programming as my career because I love coding. My strengths
-                include being a fast learner and highly adaptable to new
-                technologies. My main programming languages are JavaScript, PHP,
-                and MySQL. In addition to programming, my hobbies include
-                writing, gaming, and watching movies.
+                Hi, I'm a passionate programmer with over five years of professional experience in building and supporting software solutions. Although I graduated in Mechatronics, I chose programming as my career because creating and improving applications excites me far more than anything else.
+
+                I'm a fast learner and highly adaptable, always eager to explore new technologies and approaches. My core skills include JavaScript, PHP, and MySQL, along with modern frameworks and tools such as React, TypeScript, and Laravel. Recently, I've been expanding into AI-assisted development, integrating tools like OpenAI API, LangChain, and Puter.js into my projects to deliver smarter, more personalized user experiences.
+
+                Outside of programming, I enjoy writing, gaming, and watching movies — hobbies that often inspire creative ideas for my work.
               </Typography>
             </Box>
 
