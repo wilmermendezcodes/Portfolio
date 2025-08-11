@@ -46,7 +46,7 @@ const Experience = () => {
                 paddingBottom: "4px",
               }}
             >
-              Application Support Developer
+              Application Support & Development
             </Typography>
             <Typography variant="body1" sx={{ fontFamily: "monospace", marginBottom: 2 }}>
               ShoreCloud Corp., Part of Thermofisher (2020-present)
@@ -56,13 +56,13 @@ const Experience = () => {
           <Grid item xs={12} md={6}>
             <Typography variant="body1" sx={{ fontFamily: "monospace", marginBottom: 4 }}>
               <ul style={{ paddingLeft: "20px" }}>
-                <li>Member of the Production Team.</li>
-                <li>Doing database updates, table creation and deletion.</li>
-                <li>JQuery script maintenance and creation.</li>
-                <li>Troubleshooting front-end and back-end issues.</li>
+                <li>Designed, developed, and optimized internal tools and back-office applications using React.js, Laravel, MySQL, and AWS services, streamlining workflows and improving operational efficiency..</li>
+                <li>Built Quality Control Automation systems leveraging AWS Glue, ECS, S3, PHP, Python, and React.js, reducing manual QA processes and increasing accuracy.</li>
+                <li>Enhanced the front-end survey tool with new features and performance optimizations, improving user experience and reliability.</li>
+                <li>Implemented automation scripts and data pipeline improvements to ensure timely, accurate Tableau reporting.</li>
                 <li>Doing Development for new projects using React.js and Laravel.</li>
-                <li>Have worked also using Python for data transformations.</li>
-                <li>Worked in AWS services for the current project (data quality).</li>
+                <li>Provided real-time technical support to field teams, integrating modern debugging tools for rapid issue resolution and maintaining operational continuity.</li>
+                <li>Partnered with cross-functional teams to prepare existing systems for AI-driven enhancements, ensuring scalability and modernization readiness.</li>
               </ul>
             </Typography>
           </Grid>
