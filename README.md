@@ -1,5 +1,5 @@
 # Cozy Theme:
-<img width="1886" height="912" alt="image" src="https://github.com/user-attachments/assets/2b6f55a8-961b-43c6-9c82-012dc6518799" />
+<img width="1886" height="912" alt="image" src="https://github.com/user-attachments/assets/da5717a6-35a9-4219-a8af-14b0b0716ca2" />
 
 # Blazing Theme:
 <img width="1886" height="912" alt="image" src="https://github.com/user-attachments/assets/1aaef4d4-158f-4885-9e82-e017988a50f9" />
