@@ -1,7 +1,7 @@
-#Cozy Theme:
-<img width="1897" height="915" alt="image" src="https://github.com/user-attachments/assets/4981e74f-1ba4-4fec-adc4-193066b4eb42" />
+# Cozy Theme:
+<img width="1886" height="912" alt="image" src="https://github.com/user-attachments/assets/2b6f55a8-961b-43c6-9c82-012dc6518799" />
 
-#Blazing Theme:
+# Blazing Theme:
 <img width="1886" height="912" alt="image" src="https://github.com/user-attachments/assets/1aaef4d4-158f-4885-9e82-e017988a50f9" />
 
 # Portfolio App Guide
