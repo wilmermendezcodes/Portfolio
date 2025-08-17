@@ -1,5 +1,6 @@
 import React from "react";
 import { Typography, Box, Grid, Paper } from "@mui/material";
+import { useTheme } from '@mui/material/styles';
 import { useSpring, animated } from "react-spring";
 
 const AnimatedTypography = animated(Typography); // Wrap Typography with animated from react-spring
@@ -12,49 +13,51 @@ const Experience = () => {
     delay: 500, // Delay the animation
   });
 
+  const theme = useTheme();
   return (
-    <Box sx={{ padding: 4 }}>
-      <Paper elevation={3} sx={{ padding: 4, borderRadius: 16 }}>
+    <Box sx={{ padding: { xs: 2, md: 4 } }}>
+      <Paper elevation={3} sx={{ padding: { xs: 2, md: 4 }, borderRadius: 4, backgroundColor: 'background.paper' }}>
         <AnimatedTypography
           variant="h4"
           sx={{
-            fontFamily: "monospace",
-            fontWeight: "bold",
+            fontFamily: 'inherit',
+            fontWeight: 'bold',
             marginBottom: 4,
             textAlign: "center",
             textTransform: "uppercase",
             letterSpacing: "0.1em",
-            borderBottom: "2px solid #738A0A",
+            borderBottom: theme => `2px solid ${theme.palette.primary.main}`,
             paddingBottom: "8px",
           }}
           style={textSpring} // Apply spring animation style
         >
           Work Experience
         </AnimatedTypography>
+        {/* Illustration removed per request; artistic lines handled outside the card */}
 
-        <Grid container spacing={2}>
+        <Grid container spacing={3}>
           <Grid item xs={12} md={6}>
             <Typography
               variant="h5"
               sx={{
-                fontFamily: "monospace",
-                fontWeight: "bold",
+                fontFamily: 'inherit',
+                fontWeight: 'bold',
                 marginBottom: 2,
-                color: "#738A0A",
+                color: 'primary.main',
                 textTransform: "uppercase",
-                borderBottom: "1px solid #738A0A",
+                borderBottom: theme => `1px solid ${theme.palette.primary.main}`,
                 paddingBottom: "4px",
               }}
             >
               Application Support & Development
             </Typography>
-            <Typography variant="body1" sx={{ fontFamily: "monospace", marginBottom: 2 }}>
+            <Typography variant="body1" sx={{ marginBottom: 2 }}>
               ShoreCloud Corp., Part of Thermofisher (2020-present)
             </Typography>
           </Grid>
 
           <Grid item xs={12} md={6}>
-            <Typography variant="body1" sx={{ fontFamily: "monospace", marginBottom: 4 }}>
+            <Typography variant="body1" sx={{ marginBottom: 4 }}>
               <ul style={{ paddingLeft: "20px" }}>
                 <li>Designed, developed, and optimized internal tools and back-office applications using React.js, Laravel, MySQL, and AWS services, streamlining workflows and improving operational efficiency..</li>
                 <li>Built Quality Control Automation systems leveraging AWS Glue, ECS, S3, PHP, Python, and React.js, reducing manual QA processes and increasing accuracy.</li>

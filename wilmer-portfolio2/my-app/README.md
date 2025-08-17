@@ -1,3 +1,16 @@
+# Portfolio App Guide
+
+This is a React 18 + MUI 5 portfolio with a cozy theme (pastel greens) and a rocket theme (glossy red/black/blue). It includes smooth transitions, parallax details, and a custom cursor.
+
+For contributors and AI agents, please read:
+- `AGENTS.md` — quick onboarding and rules of the road
+- `THEME_GUIDE.md` — how the cozy/rocket themes work
+- `COMPONENT_MAP.md` — where things live and what they do
+- `TASK_PLAYBOOK.md` — common task recipes and checklists
+- `CONTRIBUTING.md` — style, performance, and accessibility expectations
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

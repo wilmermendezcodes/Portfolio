@@ -7,6 +7,7 @@ import {
   ListItem,
   ListItemAvatar,
   ListItemText,
+  ListItemButton,
   Dialog,
   DialogTitle,
   DialogContent,
@@ -15,6 +16,7 @@ import {
   LinearProgress,
 } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useTheme } from '@mui/material/styles';
 import {
   faPhp,
   faJsSquare,
@@ -135,10 +137,78 @@ const skills = [
         description:
           "Docker is a platform for developing, shipping, and running applications. Docker enables you to separate your applications from your infrastructure so you can deliver software quickly.",
       },
+      {
+        name: "Replit",
+        icon: faGithub,
+        proficiency: 3,
+        description:
+          "Replit is an online IDE and platform for quickly prototyping and hosting applications.",
+      },
+      {
+        name: "VS Code + Xdebug",
+        icon: faGithub,
+        proficiency: 4,
+        description:
+          "VS Code with Xdebug for PHP enables step debugging, breakpoints, and variable inspection.",
+      },
+      {
+        name: "Chrome DevTools",
+        icon: faGithub,
+        proficiency: 4,
+        description:
+          "Chrome DevTools for performance profiling, network analysis, and frontend debugging.",
+      },
+    ],
+  },
+  {
+    category: "AI & Automation",
+    items: [
+      {
+        name: "OpenAI API",
+        icon: faGithub,
+        proficiency: 3.5,
+        description:
+          "Building AI-assisted features and copilots using OpenAI APIs.",
+      },
+      {
+        name: "OpenRouter",
+        icon: faGithub,
+        proficiency: 3,
+        description:
+          "Routing across multiple LLM providers for cost and capability optimization.",
+      },
+      {
+        name: "LLM Models",
+        icon: faGithub,
+        proficiency: 3.5,
+        description:
+          "Prompting, function-calling, and evaluation patterns for modern LLMs.",
+      },
+      {
+        name: "Agentic AI Automation",
+        icon: faGithub,
+        proficiency: 3,
+        description:
+          "Designing tool-using AI agents to automate workflows and tasks.",
+      },
+      {
+        name: "AI Software Development",
+        icon: faGithub,
+        proficiency: 3,
+        description:
+          "Integrating AI into apps—retrieval, summarization, and task automation.",
+      },
+      {
+        name: "Codex CLI",
+        icon: faGithub,
+        proficiency: 3.5,
+        description:
+          "Agentic coding flows for faster iteration and structured changes.",
+      },
     ],
   },
 ];
-
+  
 const Skills = () => {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [selectedTechnology, setSelectedTechnology] = useState({});
@@ -152,49 +222,60 @@ const Skills = () => {
     setDialogOpen(false);
   };
 
+  const theme = useTheme();
   return (
-    <Box sx={{ marginLeft: -20 }}>
+    <Box sx={{ px: { xs: 2, md: 4 }, py: { xs: 2, md: 3 } }}>
       <Typography
         sx={{
           textAlign: "left",
-          fontFamily: "monospace",
-          marginTop: -5,
-          fontSize: 30,
+          fontSize: 28,
           fontWeight: "bold",
+          borderBottom: (theme) => `2px solid ${theme.palette.primary.main}`,
+          pb: 1,
         }}
       >
-        SKILLS:
+        Skills
       </Typography>
-      <Grid container spacing={2} sx={{ marginTop: 2 }}>
+      {/* Illustration removed per request; artistic lines handled outside the card */}
+      <Grid container spacing={3} sx={{ mt: 1 }}>
         {skills.map((skill, index) => (
-          <Grid item xs={4} key={index}>
+          <Grid item xs={12} md={4} key={index}>
             <Typography
               variant="h6"
-              sx={{ fontFamily: "monospace", fontSize: 25, marginBottom: 2 }}
+              sx={{ fontSize: 22, mb: 1, color: 'text.secondary' }}
             >
-              {skill.category}:
+              {skill.category}
             </Typography>
             <List>
               {skill.items.map((item, index) => (
-                <ListItem
-                  key={index}
-                  button
-                  onClick={() => handleTechnologyClick(item)}
-                >
-                  <ListItemAvatar>
-                    <Box
-                      sx={{
-                        width: 50,
-                        height: 50,
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                      }}
-                    >
-                      <FontAwesomeIcon icon={item.icon} size="2x" />
-                    </Box>
-                  </ListItemAvatar>
-                  <ListItemText primary={item.name} />
+                <ListItem key={index} disableGutters>
+                  <ListItemButton
+                    onClick={() => handleTechnologyClick(item)}
+                    sx={{
+                      borderRadius: 2,
+                      transition: 'background-color 150ms ease, transform 120ms ease',
+                      '&:hover': {
+                        backgroundColor: 'secondary.light',
+                        transform: 'translateY(-1px)'
+                      },
+                    }}
+                  >
+                    <ListItemAvatar>
+                      <Box
+                        sx={{
+                          width: 44,
+                          height: 44,
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          color: 'primary.main',
+                        }}
+                      >
+                        <FontAwesomeIcon icon={item.icon} size="lg" />
+                      </Box>
+                    </ListItemAvatar>
+                    <ListItemText primary={item.name} />
+                  </ListItemButton>
                 </ListItem>
               ))}
             </List>
@@ -206,40 +287,22 @@ const Skills = () => {
         open={dialogOpen}
         onClose={handleCloseDialog}
         PaperProps={{
-          style: {
-            background:
-              'url("https://www.transparenttextures.com/patterns/old-paper.png"), #f5f5dc',
-            backgroundBlendMode: "multiply",
-            borderRadius: 15,
-            border: "2px solid #d2b48c",
-            padding: "20px",
+          sx: {
+            backgroundColor: 'background.paper',
+            borderRadius: 3,
+            border: (theme) => `2px solid ${theme.palette.secondary.main}`,
+            p: 2,
           },
         }}
       >
-        <DialogTitle
-          sx={{
-            fontFamily: "'Papyrus', 'Fantasy', cursive",
-            color: "#556b2f",
-            fontSize: "1.5rem",
-          }}
-        >
+        <DialogTitle sx={{ color: 'text.primary', fontWeight: 'bold' }}>
           {selectedTechnology.name}
         </DialogTitle>
         <DialogContent>
-          <Typography
-            sx={{
-              fontFamily: "'Papyrus', 'Fantasy', cursive",
-              color: "#556b2f",
-            }}
-          >
+          <Typography sx={{ color: 'text.primary', mb: 1 }}>
             {selectedTechnology.description}
           </Typography>
-          <Typography
-            sx={{
-              fontFamily: "'Papyrus', 'Fantasy', cursive",
-              color: "#556b2f",
-            }}
-          >
+          <Typography sx={{ color: 'text.secondary', mb: 1 }}>
             Proficiency Level: {selectedTechnology.proficiency}
           </Typography>
           <Box sx={{ width: "100%", display: "flex", alignItems: "center" }}>
@@ -248,9 +311,9 @@ const Skills = () => {
                 variant="determinate"
                 value={(selectedTechnology.proficiency / 5) * 100}
                 sx={{
-                  backgroundColor: "#8BC34A", // Light green background
-                  "& .MuiLinearProgress-bar": {
-                    backgroundColor: "#388E3C", // Darker green for the bar
+                  backgroundColor: 'secondary.light',
+                  '& .MuiLinearProgress-bar': {
+                    backgroundColor: 'primary.main',
                   },
                   height: 10,
                   borderRadius: 5,
@@ -260,13 +323,7 @@ const Skills = () => {
           </Box>
         </DialogContent>
         <DialogActions>
-          <Button
-            onClick={handleCloseDialog}
-            sx={{
-              fontFamily: "'Papyrus', 'Fantasy', cursive",
-              color: "#556b2f",
-            }}
-          >
+          <Button onClick={handleCloseDialog} variant="contained" color="primary">
             Close
           </Button>
         </DialogActions>

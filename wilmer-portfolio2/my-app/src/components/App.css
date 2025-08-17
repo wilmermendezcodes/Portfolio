@@ -1,12 +1,3 @@
 /* App.css */
-body {
-  cursor: url(https://ani.cursors-4u.net/others/oth-9/oth911.cur), auto !important;
-  /* Example from Cursors-4u.com */
-}
-
-
-button,
-.MuiButtonBase-root,
-a {
-  cursor: url(https://ani.cursors-4u.net/others/oth-9/oth911.cur), auto !important;
-}
+/* Use default cursor; enhanced visual cursor via CursorGlow component */
+body, button, .MuiButtonBase-root, a { cursor: auto !important; }
