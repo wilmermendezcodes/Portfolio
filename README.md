@@ -1,3 +1,9 @@
+#Cozy Theme:
+<img width="1897" height="915" alt="image" src="https://github.com/user-attachments/assets/4981e74f-1ba4-4fec-adc4-193066b4eb42" />
+
+#Blazing Theme:
+<img width="1886" height="912" alt="image" src="https://github.com/user-attachments/assets/1aaef4d4-158f-4885-9e82-e017988a50f9" />
+
 # Portfolio App Guide
 
 This is a React 18 + MUI 5 portfolio with a cozy theme (pastel greens) and a rocket theme (glossy red/black/blue). It includes smooth transitions, parallax details, and a custom cursor.
